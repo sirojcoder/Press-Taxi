@@ -4,6 +4,8 @@ import Header from "./conponents/Header";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "./assets/logo1.jpg"; // ← Sizning logotipingiz
 import About from "./conponents/About";
+import Bonus from "./conponents/Bonus";
+import Bonussection from "./conponents/Bonussection";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -58,6 +60,8 @@ function App() {
           <Navbar />
           <Header />
           <About />
+          <Bonus />
+          <Bonussection />
         </div>
       )}
     </>
