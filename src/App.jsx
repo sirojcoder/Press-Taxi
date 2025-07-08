@@ -6,6 +6,8 @@ import logo from "./assets/logo1.jpg"; // ← Sizning logotipingiz
 import About from "./conponents/About";
 import Bonus from "./conponents/Bonus";
 import Bonussection from "./conponents/Bonussection";
+import Xizmatlar from "./conponents/Xizmatlar";
+import BackToTop from "./conponents/BackToTop";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -62,6 +64,8 @@ function App() {
           <About />
           <Bonus />
           <Bonussection />
+          <Xizmatlar />
+          <BackToTop />
         </div>
       )}
     </>

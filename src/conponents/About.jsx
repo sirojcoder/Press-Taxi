@@ -178,7 +178,7 @@ function About() {
                     <p className="text-[12px] sm:text-[13px] text-gray-500">Aloqa markazi</p>
                 <div className='flex items-center gap-2'>
                     <BiPhoneCall className='absolute left-8 -bottom- border p-1 bg-yellow-400 text-black border-white rounded-full text-[21px] ' />
-                    <b className="text-[15px] sm:text-[16px] text-gray-800">+998 (77) 317-13-13</b>
+                    <b className="text-[15px] sm:text-[16px] text-gray-800">+998 (71) 200-96-66</b>
                 </div>
               </div>
             </div>

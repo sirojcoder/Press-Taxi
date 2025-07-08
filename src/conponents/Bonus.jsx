@@ -2,15 +2,30 @@
 
 import { MdCheckCircle } from "react-icons/md";
 import { motion } from "framer-motion";
+
+import pul from "../assets/pul.png";
+import moy from "../assets/moy.png";
+import cobalt from "../assets/cobalt11.png";
+import shaxmat from "../assets/shaxmat.png";
+
 import {
+  FaMoneyCheckAlt,
+  FaMedal,
+  FaOilCan,
   FaGift,
-  FaCalendarAlt,
+  FaPhoneAlt,
   FaInfoCircle,
+  FaCalendarAlt,
   FaRegSmileBeam,
 } from "react-icons/fa";
-import cobalt from "../assets/cobalt11.png";
+
 
 const giftCount = 15;
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
+
 
 const generateFlyingGifts = () => {
   return Array.from({ length: giftCount }).map((_, i) => {
@@ -108,7 +123,19 @@ function Bonus() {
             </b>
             <b className="pl-4"><span className="text-3xl font-bold text-yellow-400">30</span>
               -Dekabrgacha</b>
+                 <p className="text-gray-700 flex pt-6 items-center gap-2">
+        <FaInfoCircle className="text-blue-500" />
+        To‘liq ma’lumot olish uchun:
+      </p>
+       <p className="text-lg font-bold text-yellow-400 flex items-center gap-2">
+        <FaPhoneAlt className="text-yellow-400" />
+        Yordam xizmati: +998 71 200 96 66
+      </p> <p className="text-sm text-gray-600 pt-2 flex items-center gap-2">
+      <FaInfoCircle className="text-gray-500" />
+      Har oyda yangilanadigan rag‘batlantiruvchi bonus tizimi.
+    </p>
           </div>
+          
         </motion.div>
 
         {/* Right Image */}
@@ -137,6 +164,7 @@ function Bonus() {
 
       {/* Footer */}
       <div className="text-center text-gray-400 pb-8">
+         
         <p className="flex justify-center items-center gap-2">
           <FaRegSmileBeam className="text-yellow-300 text-2xl" />
           Omadingizni sinab ko‘ring va g‘olib bo‘ling!
@@ -170,11 +198,148 @@ function Bonus() {
           <div className="absolute top-0 left-0 w-0 h-0 border-l-[30px] border-l-transparent border-y-[30px] border-y-yellow-400"></div>
         </div>
       </motion.div>
-      <div>
-        <div>
-         
-        </div>
+
+      <div className="bg-gradient-to-b from-white to-gray-100 py-14 px-4 border-t  border-yellow-400">
+      <div className="max-w-6xl mx-auto space-y-12">
+        {/* Title */}
+        <motion.h2
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center text-3xl md:text-4xl font-bold text-yellow-400"
+        >
+          <span className="text-5xl">PRESS TAXI</span>  tomonidan xar oy o'tkaziladigan Bonus. 
+        </motion.h2>
+
+        {/* Pul Mukofotlari */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src={pul}
+            alt="Pul mukofoti"
+            className="md:w-1/2 w-full object-cover"
+          />
+          <div className="p-6 space-y-4 flex-1">
+            <div className="flex items-center gap-3 text-2xl text-yellow-500 font-semibold">
+              <FaMoneyCheckAlt className="text-green-600" />
+              <span>Pul Mukofotlari</span>
+            </div>
+            <p className="text-gray-700 text-sm md:text-base">
+              Har oy eng ko‘p buyurtma bajargan haydovchilar quyidagi pul mukofotlarini qo‘lga kiritadi:
+            </p>
+           <ul className="text-gray-800 text-base space-y-1 pl-4 list-none">
+              <li><FaMedal className="inline text-yellow-500 mr-1" /> 1-o‘rin — <b className="text-green-700">5 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-gray-400 mr-1" /> 2-o‘rin — <b className="text-green-600">3 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-yellow-400 mr-1" /> 3–10-o‘rin — <b className="text-green-500">1 000 000 so‘m</b></li>
+            </ul>
+
+            <p className="text-sm text-gray-600 pt-2">
+              <span className="font-semibold text-gray-800">Bonus muddati:</span> <br />
+              <span className="text-blue-600  text-2xl font-semibold">10-iyun – 10-iyul</span>
+            </p>
+             <p className="text-gray-700 flex items-center gap-2">
+        <FaInfoCircle className="text-blue-500" />
+        To‘liq ma’lumot olish uchun:
+      </p>
+      <p className="text-lg font-bold text-green-600 flex items-center gap-2">
+        <FaPhoneAlt className="text-green-500" />
+        Yordam xizmati: +998 71 200 96 66
+      </p>
+          </div>
+        </motion.div>
+
+        {/* Moy sovg'alari */}
+       
+<motion.div
+  variants={fadeInUp}
+  initial="hidden"
+  whileInView="visible"
+  transition={{ duration: 0.6, delay: 0.2 }}
+  viewport={{ once: true }}
+  className="flex flex-col-reverse md:flex-row bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+>
+  <div className="p-6 space-y-4 flex-1">
+    {/* Title */}
+    <div className="flex items-center gap-3 text-2xl text-yellow-500 font-semibold">
+      <FaOilCan className="text-orange-500" />
+      <span>Motor Moylari Sovg‘a</span>
+    </div>
+
+    {/* Description */}
+    <p className="text-gray-700 text-sm md:text-base flex items-center gap-2">
+      <FaGift className="text-green-500" />
+      10–15-o‘rin haydovchilari uchun sovg‘alar:
+    </p>
+
+    {/* List */}
+    <ul className="text-gray-800 text-base space-y-1 pl-5 list-disc">
+      <li className="flex items-center gap-2">
+        <FaOilCan className="text-orange-500" />
+        Motor moylari taqdim etiladi
+      </li>
+      <li className="flex items-center gap-2">
+        <FaGift className="text-yellow-400" />
+        Siz istagan <span className="text-blue-600 font-semibold">brend moy</span> bilan
+      </li>
+    </ul>
+
+    {/* Kontakt */}
+    <div className="pt-3 space-y-1">
+      <p className="text-gray-700 flex items-center gap-2">
+        <FaInfoCircle className="text-blue-500" />
+        To‘liq ma’lumot olish uchun:
+      </p>
+      <p className="text-lg font-bold text-green-600 flex items-center gap-2">
+        <FaPhoneAlt className="text-green-500" />
+        Yordam xizmati: +998 71 200 96 66
+      </p>
+    </div>
+
+    {/* Qo‘shimcha eslatma */}
+    <p className="text-sm text-gray-600 pt-2 flex items-center gap-2">
+      <FaInfoCircle className="text-gray-500" />
+      Har oyda yangilanadigan rag‘batlantiruvchi bonus tizimi.
+    </p>
+  </div>
+
+  {/* Image */}
+  <img
+    src={moy}
+    alt="Moy sovg‘asi"
+    className="md:w-1/2 w-full object-cover"
+  />
+</motion.div>
       </div>
+    </div>
+     <div className="w-full overflow-hidden h-[38px] mb-4 relative">
+      <motion.div
+        className="flex"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {[...Array(5)].map((_, i) => (
+          <img
+            key={i}
+            src={shaxmat}
+            alt="checker"
+            className="min-w-[1400px] h-[32px] object-cover"
+          />
+        ))}
+      </motion.div>
+    </div>
+    
     </div>
   );
 }
