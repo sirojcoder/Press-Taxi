@@ -26,7 +26,7 @@ const BackToTop = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={show ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
       transition={{ duration: 0.4 }}
-      className="fixed bottom-21 right-6 z-50"
+      className="fixed bottom-7 right-6 z-50"
     >
       <button
         onClick={scrollToTop}

@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "./assets/logo1.jpg"; // ← Sizning logotipingiz
 import About from "./conponents/About";
 import Bonus from "./conponents/Bonus";
-import Bonussection from "./conponents/Bonussection";
 import Xizmatlar from "./conponents/Xizmatlar";
 import BackToTop from "./conponents/BackToTop";
+import Manzillar from "./conponents/Manzillar";
+import Footer from "./conponents/Footer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -63,8 +64,9 @@ function App() {
           <Header />
           <About />
           <Bonus />
-          <Bonussection />
           <Xizmatlar />
+          <Manzillar />
+          <Footer />
           <BackToTop />
         </div>
       )}
