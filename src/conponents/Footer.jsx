@@ -25,6 +25,12 @@ const Footer = () => {
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-yellow-400" /> Toshkent, Chilonzor tumani, Cho'ponota 8
             </li>
+             <li className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-yellow-400" /> Toshkent, Yunusobod tumani, Yunusobod 12
+            </li>
+            <li className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-yellow-400" /> Samarqand, Amir Temur ko'chasi 45
+            </li>
           </ul>
         </div>
 

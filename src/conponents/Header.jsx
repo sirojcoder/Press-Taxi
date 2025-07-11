@@ -3,6 +3,9 @@
 import { motion } from "framer-motion";
 import { FaFirstOrder } from "react-icons/fa";
 import moshina from "../assets/moshina.png";
+import kia from "../assets/kia.png";
+import haval from "../assets/haval.png";
+import bluecobalt from "../assets/bluecobalt.png";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -62,7 +65,7 @@ const Header = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-[64px] sm:text-5xl lg:text-[94px] font-bold leading-tight mb-4"
+              className="text-[64px] sm:text-5xl lg:text-[110px] font-bold leading-tight mb-4"
             >
               Press Taxi <br />
               <motion.span 
@@ -84,19 +87,21 @@ const Header = () => {
                 transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
                 className="absolute top-1 left-1 w-full h-[55px] border-2 md:mt-8 border-yellow-400 z-0 transform translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-in-out pointer-events-none"
               />
-              <motion.button
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px -2px 10px rgba(255,255,255,0.5)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                className="relative z-10 bg-yellow-400 text-gray-900 px-6 py-3 md:mt-9 font-semibold text-md sm:text-lg"
-              >
-                BOG'LANISH
-              </motion.button>
+           <motion.a
+              href="tel:+998712009666"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px -2px 10px rgba(255,255,255,0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="relative z-10 bg-yellow-400 text-gray-900 px-6 py-3 md:mt-9 font-semibold text-md sm:text-lg inline-block"
+            >
+              BOG'LANISH
+            </motion.a>
+
             </motion.div>
           </div>
 
@@ -107,7 +112,7 @@ const Header = () => {
             <motion.img 
               src={moshina} 
               alt="moshina" 
-              className="w-[300px] sm:w-[400px] md:w-[550px] h-auto object-contain"
+              className="w-[400px] sm:w-[500px] md:w-[650px] h-auto object-contain"
               animate={{ 
                 x: [0, 3, -3, 0]
               }}
