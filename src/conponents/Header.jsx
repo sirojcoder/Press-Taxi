@@ -3,9 +3,6 @@
 import { motion } from "framer-motion";
 import { FaFirstOrder } from "react-icons/fa";
 import moshina from "../assets/moshina.png";
-import kia from "../assets/kia.png";
-import haval from "../assets/haval.png";
-import bluecobalt from "../assets/bluecobalt.png";
 import { useEffect, useState } from "react";
 
 const Header = () => {
@@ -20,7 +17,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="relative text-white overflow-hidden h-auto md:h-[500px]">
+    <header className="relative text-white overflow-hidden h-auto md:h-[500px] mt-24" id="home">
       {/* Diagonal lines background similar to Windows activation */}
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>

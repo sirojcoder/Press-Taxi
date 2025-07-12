@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaTaxi } from "react-icons/fa";
 
 const Manzillar = () => {
   return (
-    <div className="bg-gray-50 py-16 px-4">
+    <div className="bg-gray-50 py-16 px-4 " id="ofislar-qismi">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           className="text-4xl font-bold text-yellow-400 mb-3"

@@ -2,7 +2,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTelegram, FaInstagram, FaFace
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
+    <footer className="bg-gray-900 text-white py-12 px-4" id="contact-qismi">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Logo va Tavsif */}
         <div>
@@ -19,18 +19,14 @@ const Footer = () => {
             <li className="flex items-center gap-2">
               <FaPhoneAlt className="text-yellow-400" /> +998 71 200 96 66
             </li>
-            <li className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-400" /> info@presstaxi.uz
-            </li>
+            
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-yellow-400" /> Toshkent, Chilonzor tumani, Cho'ponota 8
             </li>
              <li className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-yellow-400" /> Toshkent, Yunusobod tumani, Yunusobod 12
             </li>
-            <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-yellow-400" /> Samarqand, Amir Temur ko'chasi 45
-            </li>
+            
           </ul>
         </div>
 
@@ -52,13 +48,7 @@ const Footer = () => {
             >
               <FaInstagram />
             </a>
-            <a
-              href="https://facebook.com/presstaxi"
-              className="p-2 bg-yellow-400 text-gray-900 rounded-full hover:bg-yellow-300 transition"
-              target="_blank" rel="noopener noreferrer"
-            >
-              <FaFacebookF />
-            </a>
+          
           </div>
         </div>
 

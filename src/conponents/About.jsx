@@ -1,100 +1,13 @@
-// import ofis from '../assets/ofis.jpg';
-// import logo from '../assets/logo.jpg';
-// import { motion } from "framer-motion";
-// import { SiAboutdotme } from "react-icons/si";
 
-// function About (){
-//     return (
-//        <div className='container mx-auto mt-[100px] mb-7 w-[860px]'>
-//       <div className='flex justify-between items-center gap-14'>
-
-//         {/* Rasm */}
-//         <div className="relative w-[1200px] h-[300px]">
-//           <img
-//             src={ofis}
-//             alt="logo"
-//             className="w-full h-full rounded-[16px] object-cover"
-//           />
-
-//           {/* 2000+ animatsiyali box */}
-//           <motion.div
-//             className='absolute bg-white w-[160px] border border-yellow-400 flex flex-col justify-center items-center h-[74px] rounded-lg -left-[38px] -top-[39px]'
-//             animate={{ scale: [1, 1.05, 1] }}
-//             transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-//           >
-//             <b className='text-[28px] text-yellow-500'>2000+</b>
-//             <p className='text-[12px] text-gray-400 font-semibold'>Mamnun xaydovchilar</p>
-//           </motion.div>
-
-//           {/* Sariq harakatlanuvchi chiziq */}
-//           <motion.div
-//             className='w-[14px] h-[160px] rounded-lg bg-yellow-400 absolute -left-[35px] bottom-[14px]'
-//             animate={{ y: [-4, 4, -4] }}
-//             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-//           />
-//         </div>
-
-//         {/* Matn va aloqa qismi */}
-//         <div className='w-[900px]'>
-//           <div>
-//             <div className='flex items-end gap-4'>
-//                 <SiAboutdotme  className='text-[34px]'/>
-//                 <p>BIZ HAQIMIZDA.</p>
-//             </div>
-//             <h3 className='text-[55px] text-yellow-500'>Press Taxi</h3>
-//             <p className='text-[20px] text-gray-400'><span className='text-red-500 text-[24px] font-semibold'>Y</span><span className='text-gray-900'>andex</span> <span className='bg-black rounded-[9px]  text-white'>Go</span> ning rasmiy hamkori</p>
-//             <p className='text-[12px] text-gray-500 mt-2'>
-//               Hozirda Toshkent shaxrida va Viloyatlarida bir nechta ofislarimiz bor va haydovchilarga 24/7 xizmat ko'rsatib kelyabmiz
-//             </p>
-//           </div>
-
-//           <div className='flex gap-5 mt-4 items-center'>
-//             <img src={logo} alt="" className='w-[50px] h-[50px] rounded-full' />
-//             <div>
-//               <p>Aloqa markazi</p>
-//               <b>+998(77)3171313</b>
-//             </div>
-             
-//             <motion.div key={`button`} className="flex justify-center mb-8 md:justify-start relative inline-block group">
-//               <motion.div
-//                 initial={{ y: 10, opacity: 0 }}
-//                 animate={{ y: 0, opacity: 1 }}
-//                 transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-//                 className="absolute top-1 left-1 w-full h-[47px] border-2 md:mt-8 border-yellow-400 z-0 transform translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-in-out pointer-events-none"
-//               />
-//               <motion.button
-//                 initial={{ y: 50, opacity: 0 }}
-//                 animate={{ y: 0, opacity: 1 }}
-//                 transition={{ delay: 0.6, duration: 0.8 }}
-//                 whileHover={{
-//                   scale: 1.05,
-//                   boxShadow: "0px -2px 10px rgba(255,255,255,0.5)",
-//                 }}
-//                 whileTap={{ scale: 0.95 }}
-//                 className="relative z-10 bg-yellow-400 text-gray-900 px-2 py-2 md:mt-9 font-semibold text-md sm:text-lg"
-//               >
-//                 About more 
-//               </motion.button>
-//             </motion.div>
-//           </div>
-
-//         </div>
-//       </div>
-//     </div>
-//     )
-// }
-// export default About;
 
 import ofis from '../assets/ofis.jpg';
 import logo from '../assets/logo.jpg';
 import shaxmat from '../assets/shaxmat.png';
 import { motion} from "framer-motion";
-import { useEffect, useState } from "react";
-
 import { SiAboutdotme } from "react-icons/si";
 import { BiPhoneCall } from "react-icons/bi";
-
 import { useInView } from "react-intersection-observer";
+import { FaPercent, FaGift, FaUserPlus, FaWallet } from "react-icons/fa";
 
 
 
@@ -106,7 +19,7 @@ function About() {
 
   return (
    <div>
-       <div ref={ref} className="container mx-auto mt-[80px] md:w-[960px] px-4 mb-14">
+       <div ref={ref} className="container mx-auto mt-[80px] md:w-[960px] px-4 mb-14" id="bizhaqimizda-qismi">
       <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-19">
 
         {/* LEFT - IMAGE */}
@@ -149,26 +62,52 @@ function About() {
           transition={{ duration: 1 }}
           className="w-full max-w-[600px]"
         >
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <SiAboutdotme className="text-[28px] sm:text-[34px]" />
-              <p className="text-[14px] sm:text-[16px] text-gray-700">BIZ HAQIMIZDA.</p>
-            </div>
+       
+<div className="bg-white py-10 px-4 sm:px-6 lg:px-8" id="bizhaqimizda-qismi">
+  <div className="max-w-4xl mx-auto">
+    <div className="flex items-center gap-3 mb-3">
+      <SiAboutdotme className="text-yellow-500 text-[28px] sm:text-[34px]" />
+      <p className="text-[14px] sm:text-[16px] text-gray-700 font-semibold uppercase">BIZ HAQIMIZDA.</p>
+    </div>
 
-            <h3 className="text-[32px] sm:text-[42px] lg:text-[55px] text-yellow-500 font-bold leading-tight">
-              Press Taxi
-            </h3>
+    <h3 className="text-[32px] sm:text-[42px] lg:text-[55px] text-yellow-500 font-bold leading-tight">
+      Press Taxi
+    </h3>
 
-            <p className="text-[16px] sm:text-[18px] text-gray-400 mt-2">
-              <span className="text-red-500 text-[20px] font-semibold">Y</span>
-              <span className="text-gray-900">andex</span>{' '}
-              <span className="bg-black rounded-[6px] text-white px-1">Go</span> ning rasmiy hamkori
-            </p>
+    <p className="text-[16px] sm:text-[18px] text-gray-600 mt-2">
+      <span className="text-red-500 text-[20px] font-semibold">Y</span>
+      <span className="text-gray-900">andex</span>{' '}
+      <span className="bg-black rounded-[6px] text-white px-1">Go</span> ning rasmiy hamkori
+    </p>
 
-            <p className="text-[13px] sm:text-[14px] text-gray-500 mt-3 border-b border-gray-100 pb-2 leading-relaxed">
-              Hozirda Toshkent shahrida va viloyatlarida bir nechta ofislarimiz bor va haydovchilarga 24/7 xizmat ko‘rsatib kelyapmiz...
-            </p>
-          </div>
+    <p className="text-[13px] sm:text-[14px] text-gray-500 mt-3 border-b border-gray-200 pb-3 leading-relaxed">
+      Hozirda Toshkent shahrida va viloyatlarida bir nechta ofislarimiz bor va haydovchilarga 24/7 xizmat ko‘rsatib kelyapmiz...
+    </p>
+
+    {/* Bonuslar */}
+    <div className="mt-5 space-y-3 text-[14px] sm:text-[15px] text-gray-700">
+      <div className="flex items-center gap-2">
+        <FaPercent className="text-yellow-500" />
+        <p>Parkimiz komissiyasi: <span className="font-bold text-yellow-400 text-[18px] pl-3">2.9%</span></p>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <FaGift className="text-yellow-500" />
+        <p>Yangi ulanishga: <span className="font-bold text-yellow-400 text-[18px] pl-3">20 000 so'm bonus</span></p>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <FaUserPlus className="text-yellow-500" />
+        <p>Do'stingizni taklif qilsangiz: <span className="font-bold text-yellow-400 text-[18px] pl-3">20 000 so'm</span></p>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <FaWallet className="text-yellow-500" />
+        <p>Balansingizni to'ldirganingizda: <span className="font-bold text-yellow-400 text-[18px] pl-1">15% Cashback</span></p>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* CONTACT + BUTTON */}
           <div className="flex flex-col sm:flex-row gap-4 mt-6 items-center sm:items-start">
@@ -191,9 +130,10 @@ function About() {
                 initial={{ y: 10, opacity: 0 }}
                 animate={inView ? { y: 0, opacity: 1 } : {}}
                 transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-                className="absolute top-1 left-1 w-full h-[34px] border-2 border-yellow-400 z-0 transform translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-in-out pointer-events-none"
+                className="absolute  w-full h-[34px] border-1 border-yellow-400 z-0 transform translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-in-out pointer-events-none"
               />
-              <motion.button
+              <motion.a
+                href='tel:+998712009666'
                 initial={{ y: 50, opacity: 0 }}
                 animate={inView ? { y: 0, opacity: 1 } : {}}
                 transition={{ delay: 0.6, duration: 1 }}
@@ -204,8 +144,8 @@ function About() {
                 whileTap={{ scale: 0.95 }}
                 className="relative z-10 bg-yellow-400 text-gray-900 px-5 py-2 font-semibold text-sm sm:text-md"
               >
-                About more
-              </motion.button>
+                Aloqa
+              </motion.a>
             </motion.div>
           </div>
         </motion.div>
@@ -230,12 +170,8 @@ function About() {
       />
     ))}
   </motion.div>
+  </div>
 </div>
-
-
-
-
-   </div>
   
   );
 }

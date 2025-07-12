@@ -2,7 +2,6 @@
 
 import { MdCheckCircle } from "react-icons/md";
 import { motion } from "framer-motion";
-
 import pul from "../assets/pul.png";
 import moy from "../assets/moy.png";
 import cobalt from "../assets/cobalt11.png";
@@ -55,7 +54,7 @@ const generateFlyingGifts = () => {
 
 function Bonus() {
   return (
-    <div className="relative">
+    <div className="relative" id="bonuslar-qismi">
       {/* Header */}
       <div className="my-14 text-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <h3 className="text-xl md:text-4xl font-bold mb-4 tracking-wide">
@@ -92,7 +91,7 @@ function Bonus() {
         <ul className="space-y-2 text-gray-700">
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
-    <span>Haydovchi sifatida ish boshlang</span>
+    <span>Press taxi haydovchisi sifatida ish boshlang</span>
   </li>
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
@@ -104,6 +103,7 @@ function Bonus() {
     <MdCheckCircle className="text-yellow-400 mt-1" />
     <span>Chekni oling va lototronga tashlang</span>
   </li>
+  
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
     <span>
@@ -139,27 +139,34 @@ function Bonus() {
         </motion.div>
 
         {/* Right Image */}
-        <motion.div
-          className="md:w-1/2 w-full relative flex justify-center items-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.img
-            src={cobalt}
-            alt="Cobalt Car"
-            className="w-[100%] sm:w-[90%] md:w-[620px] lg:w-[720px] h-auto rounded-xl z-10"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <div className="absolute inset-0 pointer-events-none z-0">
-            {generateFlyingGifts()}
-          </div>
-        </motion.div>
+     <motion.div
+  className="md:w-1/2 w-full relative flex justify-center items-center"
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* SARIQ SHAKL ORQADA */}
+ 
+  {/* RASM */}
+  <motion.img
+    src={cobalt}
+    alt="Cobalt Car"
+    className="w-[100%] sm:w-[100%] md:w-[820px] lg:w-[920px] h-auto rounded-xl z-10"
+    animate={{ scale: [1, 1.05, 1] }}
+    transition={{
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  />
+
+  {/* SOVG'ALAR */}
+  <div className="absolute inset-0 pointer-events-none z-0">
+    {generateFlyingGifts()}
+  </div>
+</motion.div>
+
+
       </div>
 
       {/* Footer */}
@@ -238,7 +245,8 @@ function Bonus() {
            <ul className="text-gray-800 text-base space-y-1 pl-4 list-none">
               <li><FaMedal className="inline text-yellow-500 mr-1" /> 1-o‘rin — <b className="text-green-700">5 000 000 so‘m</b></li>
               <li><FaMedal className="inline text-gray-400 mr-1" /> 2-o‘rin — <b className="text-green-600">3 000 000 so‘m</b></li>
-              <li><FaMedal className="inline text-yellow-400 mr-1" /> 3–10-o‘rin — <b className="text-green-500">1 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-yellow-400 mr-1" /> 3–o‘rin — <b className="text-green-500">2 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-yellow-400 mr-1" /> 4–10-o‘rin — <b className="text-green-500">1 000 000 so‘m</b></li>
             </ul>
 
             <p className="text-sm text-gray-600 pt-2">
