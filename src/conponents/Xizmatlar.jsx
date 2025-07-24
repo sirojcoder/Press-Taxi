@@ -11,49 +11,8 @@ import sugurta from "../assets/sugurta.jpg";
 import brending from "../assets/brending.jpeg";
 import ishonchnoma from "../assets/ishonchnoma.jpg";
 import logo from "../assets/logo1.jpg";
+import { useTranslation } from "react-i18next";
 
-const services = [
-  {
-    image: litsenziya,
-    title: "LITSENZIYA",
-    desc: "Avtomobil transportida yo‘lovchilarni va yuklarni tashishga litsenziya olish",
-    docs: "Kerak bo'ladigan hujjatlar",
-    info: "Texpasport va haydovchilik guvohnomasi",
-  },
-  {
-    image: sugurta,
-    title: "SUG'URTA",
-    desc: "Avtomobil transporti uchun sug'urta polislarini olish",
-    docs: "Kerak bo'ladigan hujjatlar",
-    info: "Texpasport va haydovchilik guvohnomasi",
-  },
-  {
-    image: brending,
-    title: "BRENDING RUXSATNOMA",
-    desc: "Avtomobil transportini brending qilish uchun ruxsatnoma olish",
-    docs: "Kerak bo'ladigan hujjatlar",
-    info: "Texpasport va haydovchilik guvohnomasi",
-  },
-  {
-    image: ishonchnoma,
-    title: "ISHONCHNOMA",
-    desc: "Avtomobil transportini boshqarish uchun ishonchnoma olish",
-    docs: "Kerak bo'ladigan hujjatlar",
-    info: "Texpasport va haydovchilik guvohnomasi",
-  },
-  {
-    image: logo,
-    title: "Press taxi haydovchisi bo'lish",
-    desc: "Press taxi hamkori sifatida ishlash uchun ariza berish",
-    docs: "Kerak bo'ladigan hujjatlar",
-    info: "Texpasport va haydovchilik guvohnomasi",
-  },
-];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
 
 const settings = {
   dots: true,
@@ -73,6 +32,51 @@ const settings = {
 };
 
 const Xizmatlar = () => {
+  const { t } = useTranslation();
+
+  const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const services = [
+  {
+    image: litsenziya,
+    title: t("serviceLicenseTitle"),
+    desc: t("serviceLicenseDesc"),
+    docs: t("serviceDocs"),
+    info: t("serviceInfo"),
+  },
+  {
+    image: sugurta,
+    title: t("serviceInsuranceTitle"),
+    desc: t("serviceInsuranceDesc"),
+    docs: t("serviceDocs"),
+    info: t("serviceInfo"),
+  },
+  {
+    image: brending,
+    title: t("serviceBrandingTitle"),
+    desc: t("serviceBrandingDesc"),
+    docs: t("serviceDocs"),
+    info: t("serviceInfo"),
+  },
+  {
+    image: ishonchnoma,
+    title: t("servicePowerOfAttorneyTitle"),
+    desc: t("servicePowerOfAttorneyDesc"),
+    docs: t("serviceDocs"),
+    info: t("serviceInfo"),
+  },
+  {
+    image: logo,
+    title: t("serviceDriverTitle"),
+    desc: t("serviceDriverDesc"),
+    docs: t("serviceDocs"),
+    info: t("serviceInfo"),
+  },
+];
+
   return (
     <div className="bg-gradient-to-b from-white to-gray-100 py-20 px-4" id="xizmatlar-qismi">
       <div className="max-w-7xl mx-auto text-center">
@@ -92,10 +96,10 @@ const Xizmatlar = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Xizmatlar bo‘limi
+          {t("servicesTitle")}
         </motion.h2>
     <div className="pb-7">
-      <p>Ushbu hizmatlarni siz online va ofline shaklida foydalansangiz bo'ladi. Hizmalar bo'yicha to'liq malumot olmoqchi bo'lsangiz biz bilan bog'laning.</p>
+      <p>{t("servicesDescription")}</p>
     </div>
         <div className="hidden md:block">
           <Slider {...settings}>

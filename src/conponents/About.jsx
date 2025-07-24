@@ -8,14 +8,19 @@ import { SiAboutdotme } from "react-icons/si";
 import { BiPhoneCall } from "react-icons/bi";
 import { useInView } from "react-intersection-observer";
 import { FaPercent, FaGift, FaUserPlus, FaWallet } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+
 
 
 
 function About() {
+  const { t } = useTranslation();
+  
   const { ref, inView } = useInView({
     threshold: 0.3,
     triggerOnce: true,
   });
+
 
   return (
    <div>
@@ -67,7 +72,7 @@ function About() {
   <div className="max-w-4xl mx-auto">
     <div className="flex items-center gap-3 mb-3">
       <SiAboutdotme className="text-yellow-500 text-[28px] sm:text-[34px]" />
-      <p className="text-[14px] sm:text-[16px] text-gray-700 font-semibold uppercase">BIZ HAQIMIZDA.</p>
+      <p className="text-[14px] sm:text-[16px] text-gray-700 font-semibold uppercase">{t("about")}</p>
     </div>
 
     <h3 className="text-[32px] sm:text-[42px] lg:text-[55px] text-yellow-500 font-bold leading-tight">
@@ -77,33 +82,33 @@ function About() {
     <p className="text-[16px] sm:text-[18px] text-gray-600 mt-2">
       <span className="text-red-500 text-[20px] font-semibold">Y</span>
       <span className="text-gray-900">andex</span>{' '}
-      <span className="bg-black rounded-[6px] text-white px-1">Go</span> ning rasmiy hamkori
+      <span className="bg-black rounded-[6px] text-white px-1">Go</span>  {t("officialPartner")}
     </p>
 
     <p className="text-[13px] sm:text-[14px] text-gray-500 mt-3 border-b border-gray-200 pb-3 leading-relaxed">
-      Hozirda Toshkent shahrida va viloyatlarida bir nechta ofislarimiz bor va haydovchilarga 24/7 xizmat ko‘rsatib kelyapmiz...
+       {t("aboutDescription")}
     </p>
 
     {/* Bonuslar */}
     <div className="mt-5 space-y-3 text-[14px] sm:text-[15px] text-gray-700">
       <div className="flex items-center gap-2">
         <FaPercent className="text-yellow-500" />
-        <p>Parkimiz komissiyasi: <span className="font-bold text-yellow-400 text-[18px] pl-3">2.9%</span></p>
+        <p>{t("bonusCommission")} <span className="font-bold text-yellow-400 text-[18px] pl-3">2.9%</span></p>
       </div>
 
       <div className="flex items-center gap-2">
         <FaGift className="text-yellow-500" />
-        <p>Yangi ulanishga: <span className="font-bold text-yellow-400 text-[18px] pl-3">20 000 so'm bonus</span></p>
+        <p>{t("bonusNewJoin")} <span className="font-bold text-yellow-400 text-[18px] pl-3">20 000 so'm bonus</span></p>
       </div>
 
       <div className="flex items-center gap-2">
         <FaUserPlus className="text-yellow-500" />
-        <p>Do'stingizni taklif qilsangiz: <span className="font-bold text-yellow-400 text-[18px] pl-3">20 000 so'm</span></p>
+        <p>{t("bonusInviteFriend")} <span className="font-bold text-yellow-400 text-[18px] pl-3">20 000 so'm</span></p>
       </div>
 
       <div className="flex items-center gap-2">
         <FaWallet className="text-yellow-500" />
-        <p>Balansingizni to'ldirganingizda: <span className="font-bold text-yellow-400 text-[18px] pl-1">15% Cashback</span></p>
+        <p>{t("bonusCashback")} <span className="font-bold text-yellow-400 text-[18px] pl-1">15% Cashback</span></p>
       </div>
     </div>
   </div>
@@ -114,7 +119,7 @@ function About() {
             <div className="flex items-center relative gap-3">
               <img src={logo} alt="aloqa" className="w-[45px] h-[45px] rounded-full" />
               <div>
-                    <p className="text-[12px] sm:text-[13px] text-gray-500">Aloqa markazi</p>
+                    <p className="text-[12px] sm:text-[13px] text-gray-500">{t("callCenter")}</p>
                 <div className='flex items-center gap-2'>
                     <BiPhoneCall className='absolute left-8 -bottom- border p-1 bg-yellow-400 text-black border-white rounded-full text-[21px] ' />
                     <b className="text-[15px] sm:text-[16px] text-gray-800">+998 (71) 200-96-66</b>
@@ -144,7 +149,7 @@ function About() {
                 whileTap={{ scale: 0.95 }}
                 className="relative z-10 bg-yellow-400 text-gray-900 px-5 py-2 font-semibold text-sm sm:text-md"
               >
-                Aloqa
+               {t("contactBtn")}
               </motion.a>
             </motion.div>
           </div>

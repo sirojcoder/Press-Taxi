@@ -6,6 +6,8 @@ import pul from "../assets/pul.png";
 import moy from "../assets/moy.png";
 import cobalt from "../assets/cobalt11.png";
 import shaxmat from "../assets/shaxmat.png";
+import { useTranslation } from "react-i18next";
+
 
 import {
   FaMoneyCheckAlt,
@@ -53,15 +55,17 @@ const generateFlyingGifts = () => {
 };
 
 function Bonus() {
+  const { t } = useTranslation();
+
   return (
     <div className="relative" id="bonuslar-qismi">
       {/* Header */}
       <div className="my-14 text-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <h3 className="text-xl md:text-4xl font-bold mb-4 tracking-wide">
-          Bonuslar bo‘limi
+          {t("bonusTitle")} 
         </h3>
         <motion.p className="text-2xl md:text-3xl text-yellow-400 font-semibold px-6 py-4 rounded-lg inline-block">
-          PRESS TAXI TOMONIDAN YIL SOVG'ASI
+          {t("bonusSubtitle")}
         </motion.p>
       </div>
 
@@ -76,63 +80,62 @@ function Bonus() {
         >
           <h4 className="text-2xl font-bold flex items-center gap-2 text-gray-800">
             <FaGift className="text-yellow-500" />
-            Press Taxi tomonidan taqdim etilgan sovg‘a
+             {t("bonusCarTitle")}
           </h4>
 
           <h1 className="text-2xl md:text-4xl text-yellow-400 font-bold">
-            Avtomobil sizni kutmoqda!
+            {t("bonusConditionInfo")}
           </h1>
 
           <p className="flex items-center gap-2 text-gray-700">
             <FaInfoCircle className="text-blue-500" />
-            Yutib olish shartlari juda oddiy:
+          {t("bonusConditionInfo")}
           </p>
 
         <ul className="space-y-2 text-gray-700">
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
-    <span>Press taxi haydovchisi sifatida ish boshlang</span>
+    <span>{t("bonusCondition1")}</span>
   </li>
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
     <span>
-      <span className="font-bold text-yellow-400">300</span> ta buyurtma bajaring
+      <span className="font-bold text-yellow-400">300</span> {t("bonusCondition2")}
     </span>
   </li>
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
-    <span>Chekni oling va lototronga tashlang</span>
+    <span>{t("bonusCondition3")}</span>
   </li>
   
   <li className="flex items-start gap-2">
     <MdCheckCircle className="text-yellow-400 mt-1" />
     <span>
-      <span className="text-yellow-400 font-bold">31-dekabr</span> kuni g‘olib aniqlanadi
+      <span className="text-yellow-400 font-bold">{t("bonusCondition4")}</span> 
     </span>
   </li>
 </ul>
           <div className="pt-4">
             <p className="flex items-center gap-2">
               <FaCalendarAlt className="text-green-600" />
-              Bonus muddati:
+              {t("bonusDuration")}
             </p>
             <b className="text-lg text-gray-800">
-              <span className="text-3xl font-bold text-yellow-400">1</span>
-              -Maydan{" "}
+              <span className="text-3xl font-bold text-yellow-400">{t("bonusDurationValue")}{" "}</span>
+              
               
             </b>
-            <b className="pl-4"><span className="text-3xl font-bold text-yellow-400">30</span>
-              -Dekabrgacha</b>
+            
                  <p className="text-gray-700 flex pt-6 items-center gap-2">
         <FaInfoCircle className="text-blue-500" />
-        To‘liq ma’lumot olish uchun:
+         {t("moreInfo")}
       </p>
        <p className="text-lg font-bold text-yellow-400 flex items-center gap-2">
         <FaPhoneAlt className="text-yellow-400" />
-        Yordam xizmati: +998 71 200 96 66
+       {t("supportService")}
       </p> <p className="text-sm text-gray-600 pt-2 flex items-center gap-2">
       <FaInfoCircle className="text-gray-500" />
-      Har oyda yangilanadigan rag‘batlantiruvchi bonus tizimi.
+      {t("reminder")}
     </p>
           </div>
           
@@ -174,7 +177,7 @@ function Bonus() {
          
         <p className="flex justify-center items-center gap-2">
           <FaRegSmileBeam className="text-yellow-300 text-2xl" />
-          Omadingizni sinab ko‘ring va g‘olib bo‘ling!
+           {t("goodLuck")}
         </p>
       </div>
 
@@ -217,7 +220,7 @@ function Bonus() {
           viewport={{ once: true }}
           className="text-center text-3xl md:text-4xl font-bold text-yellow-400"
         >
-          <span className="text-5xl">PRESS TAXI</span>  tomonidan xar oy o'tkaziladigan Bonus. 
+          <span className="text-5xl">PRESS TAXI</span>  {t("monthlyBonusTitle")}
         </motion.h2>
 
         {/* Pul Mukofotlari */}
@@ -237,29 +240,29 @@ function Bonus() {
           <div className="p-6 space-y-4 flex-1">
             <div className="flex items-center gap-3 text-2xl text-yellow-500 font-semibold">
               <FaMoneyCheckAlt className="text-green-600" />
-              <span>Pul Mukofotlari</span>
+              <span>  {t("cashPrizeTitle")}</span>
             </div>
             <p className="text-gray-700 text-sm md:text-base">
-              Har oy eng ko‘p buyurtma bajargan haydovchilar quyidagi pul mukofotlarini qo‘lga kiritadi:
+              {t("cashPrizeDesc")}
             </p>
            <ul className="text-gray-800 text-base space-y-1 pl-4 list-none">
-              <li><FaMedal className="inline text-yellow-500 mr-1" /> 1-o‘rin — <b className="text-green-700">5 000 000 so‘m</b></li>
-              <li><FaMedal className="inline text-gray-400 mr-1" /> 2-o‘rin — <b className="text-green-600">3 000 000 so‘m</b></li>
-              <li><FaMedal className="inline text-yellow-400 mr-1" /> 3–o‘rin — <b className="text-green-500">2 000 000 so‘m</b></li>
-              <li><FaMedal className="inline text-yellow-400 mr-1" /> 4–10-o‘rin — <b className="text-green-500">1 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-yellow-500 mr-1" /> 1-o‘rin — <b className="text-green-700">6 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-gray-400 mr-1" /> 2-o‘rin — <b className="text-green-600">2 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-yellow-400 mr-1" /> 3–o‘rin — <b className="text-green-500">1 000 000 so‘m</b></li>
+              <li><FaMedal className="inline text-yellow-400 mr-1" /> 4–10-o‘rin — <b className="text-green-500">500 000 so‘m</b></li>
             </ul>
 
             <p className="text-sm text-gray-600 pt-2">
-              <span className="font-semibold text-gray-800">Bonus muddati:</span> <br />
-              <span className="text-blue-600  text-2xl font-semibold">10-iyun – 10-iyul</span>
+              <span className="font-semibold text-gray-800">{t("cashPrizeDuration")}</span> <br />
+              <span className="text-blue-600  text-2xl font-semibold">{t("cashPrizeDurationValue")}</span>
             </p>
              <p className="text-gray-700 flex items-center gap-2">
         <FaInfoCircle className="text-blue-500" />
-        To‘liq ma’lumot olish uchun:
+      {t("moreInfo")}
       </p>
       <p className="text-lg font-bold text-green-600 flex items-center gap-2">
         <FaPhoneAlt className="text-green-500" />
-        Yordam xizmati: +998 71 200 96 66
+        {t("supportService")}
       </p>
           </div>
         </motion.div>
@@ -278,24 +281,24 @@ function Bonus() {
     {/* Title */}
     <div className="flex items-center gap-3 text-2xl text-yellow-500 font-semibold">
       <FaOilCan className="text-orange-500" />
-      <span>Motor Moylari Sovg‘a</span>
+      <span> {t("oilPrizeTitle")}</span>
     </div>
 
     {/* Description */}
     <p className="text-gray-700 text-sm md:text-base flex items-center gap-2">
       <FaGift className="text-green-500" />
-      10–15-o‘rin haydovchilari uchun sovg‘alar:
+       {t("oilPrizeDesc")}
     </p>
 
     {/* List */}
     <ul className="text-gray-800 text-base space-y-1 pl-5 list-disc">
       <li className="flex items-center gap-2">
         <FaOilCan className="text-orange-500" />
-        Motor moylari taqdim etiladi
+         {t("oilPrize1")}
       </li>
       <li className="flex items-center gap-2">
         <FaGift className="text-yellow-400" />
-        Siz istagan <span className="text-blue-600 font-semibold">brend moy</span> bilan
+        {t("oilPrize2")} <span className="text-blue-600 font-semibold">brend moy</span> bilan
       </li>
     </ul>
 
@@ -303,18 +306,18 @@ function Bonus() {
     <div className="pt-3 space-y-1">
       <p className="text-gray-700 flex items-center gap-2">
         <FaInfoCircle className="text-blue-500" />
-        To‘liq ma’lumot olish uchun:
+        {t("moreInfo")}
       </p>
       <p className="text-lg font-bold text-green-600 flex items-center gap-2">
         <FaPhoneAlt className="text-green-500" />
-        Yordam xizmati: +998 71 200 96 66
+         {t("supportService")}
       </p>
     </div>
 
     {/* Qo‘shimcha eslatma */}
     <p className="text-sm text-gray-600 pt-2 flex items-center gap-2">
       <FaInfoCircle className="text-gray-500" />
-      Har oyda yangilanadigan rag‘batlantiruvchi bonus tizimi.
+    {t("reminder")}
     </p>
   </div>
 

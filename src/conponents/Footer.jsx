@@ -1,6 +1,8 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaTelegram, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation(); 
   return (
     <footer className="bg-gray-900 text-white py-12 px-4" id="contact-qismi">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -8,23 +10,23 @@ const Footer = () => {
         <div>
           <h3 className="text-2xl font-bold text-yellow-400 mb-4">PRESS TAXI</h3>
           <p className="text-sm text-gray-300">
-            Press Taxi — bu ishonchli, tezkor va qulay xizmat ko'rsatish. 24/7 xizmat ko‘rsatamiz!
+            {t("footerDescription")}
           </p>
         </div>
 
         {/* Aloqa */}
         <div>
-          <h4 className="text-xl font-semibold mb-4">Biz bilan bog'laning</h4>
+          <h4 className="text-xl font-semibold mb-4">{t("contactUs")}</h4>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center gap-2">
               <FaPhoneAlt className="text-yellow-400" /> +998 71 200 96 66
             </li>
             
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-yellow-400" /> Toshkent, Chilonzor tumani, Cho'ponota 8
+              <FaMapMarkerAlt className="text-yellow-400" />  {t("footerAddressChilonzor")}
             </li>
              <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-yellow-400" /> Toshkent, Yunusobod tumani, Yunusobod 12
+              <FaMapMarkerAlt className="text-yellow-400" /> {t("footerAddressYunusobod")}
             </li>
             
           </ul>
@@ -32,7 +34,7 @@ const Footer = () => {
 
         {/* Ijtimoiy tarmoqlar */}
         <div>
-          <h4 className="text-xl font-semibold mb-4">Ijtimoiy tarmoqlar</h4>
+          <h4 className="text-xl font-semibold mb-4">{t("socialMedia")}</h4>
           <div className="flex space-x-4">
             <a
               href="https://t.me/Presstaxi_chilonzor"
@@ -54,18 +56,17 @@ const Footer = () => {
 
         {/* Ofislar */}
         <div>
-          <h4 className="text-xl font-semibold mb-4">Ofislar</h4>
+          <h4 className="text-xl font-semibold mb-4">{t("offices")}</h4>
           <ul className="text-sm text-gray-300 space-y-2">
-            <li>📍 Chilonzor (24/7)</li>
-            <li>📍 Yunusobod (24/7)</li>
-            <li>📍 Samarqand (24/7)</li>
+            <li> {t("officeChilonzor")}</li>
+            <li> {t("officeYunusobod")}</li>
           </ul>
         </div>
       </div>
 
       {/* Poydevor */}
       <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Press Taxi. Barcha huquqlar himoyalangan.
+        © {new Date().getFullYear()}  {t("footerCopyright")}
       </div>
     </footer>
   );
