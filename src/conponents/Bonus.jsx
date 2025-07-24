@@ -4,7 +4,7 @@ import { MdCheckCircle } from "react-icons/md";
 import { motion } from "framer-motion";
 import pul from "../assets/pul.png";
 import moy from "../assets/moy.png";
-import cobalt from "../assets/cobalt11.png";
+import cobalt from "../assets/cobalt.png";
 import shaxmat from "../assets/shaxmat.png";
 import { useTranslation } from "react-i18next";
 
